@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>oojs</title>
+    <style>
+      goo{
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <goo>Test</goo>
+    <script>
+
+      function Person (firstName, lastName){
+        this.name = firstName
+        this.famely = lastName
+        this.id = true
+
+        this.greeting = function(){
+          console.log('helloha',this.name, this.famely)
+        }
+      }
+
+      var tal = new Person('tal', 'Yaron')
+      var hagit = new Person('hagit', 'Yaron')
+      var dan = Object.create(tal)
+      Person.prototype.last = this.name + '_last'
+      console.dir(tal)
+      var boaz = new tal.constructor('boaz','Chen')
+
+      Person.prototype.bye = function(){
+        console.log('bye', this.name)
+      }
+
+      function Teacher (firstName, lastName, course){
+        Person.call(this,firstName, lastName)
+        this.course = course
+      }
+
+    </script>
+  </body>
+</html>
