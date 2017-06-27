@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=0">-->
+    <title>Local Storage</title>
+    <style>
+
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Hi</h1>
+
+    <script>
+
+      // localStorage = stores data with no expiration date
+
+      // Store
+      localStorage.setItem("lastname", "Smith");
+      localStorage.firstName = 'Bob'
+
+      // Retrieve
+      var temp = localStorage.getItem("lastname");
+      var firstName = localStorage.getItem('firstName');
+
+
+      console.log(temp, firstName);
+      
+      // Remove
+      localStorage.removeItem("lastname");
+
+      // Retrieve
+      var temp = localStorage.getItem("lastname");
+      console.log(temp);
+
+
+      // sessionStorage =  stores data for one session (data is lost when the browser tab is closed)
+
+      window.sessionStorage.setItem('tempName', 'Mosses');
+
+      var temp2 = window.sessionStorage.getItem('tempName')
+      console.log(temp2)
+
+      // Storing objects
+
+      localStorage.obj = {test:'blue', test2:'bleen'}
+      var obj1 = localStorage.getItem('obj');
+      console.log(obj1)
+      
+      localStorage.obj = JSON.stringify({test:'blue', test2:'bleen'})
+      var obj2 = JSON.parse(localStorage.getItem('obj'))
+      console.log(obj2)
+
+    </script>
+
+  </body>
+</html>
