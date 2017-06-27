@@ -12,7 +12,7 @@
   <body>
     <goo>Test</goo>
     <script>
-
+      //simple constructor (class)
       function Person (firstName, lastName){
         this.name = firstName
         this.famely = lastName
@@ -23,16 +23,22 @@
         }
       }
 
-      var tal = new Person('tal', 'Yaron')
-      var hagit = new Person('hagit', 'Yaron')
-      var dan = Object.create(tal)
+      //simple instances
+      var nevo = new Person('nevo', 'Bar-Noon')
+      var hagit = new Person('hagit', 'Bar-Noon')
+
+      //bulding from other objects
+      var dan = Object.create(nevo)
+      var boaz = new nevo.constructor('boaz','Chen')
+
+      // __proto__
       Person.prototype.last = this.name + '_last'
-      console.dir(tal)
-      var boaz = new tal.constructor('boaz','Chen')
 
       Person.prototype.bye = function(){
         console.log('bye', this.name)
       }
+
+      //creating new class from sub-class
 
       function Teacher (firstName, lastName, course){
         Person.call(this,firstName, lastName)
