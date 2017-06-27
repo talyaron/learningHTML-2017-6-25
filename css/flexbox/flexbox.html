@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=0">-->
+    <title>Object-oriented JavaScript example</title>
+    <style>
+
+      div{
+        border-radius: 10px;
+      }
+      .container{
+        display: flex;
+        flex-direction: row;
+/*        justify-content:flex-start;*/
+        align-items: baseline;
+        flex-wrap:wrap-reverse;
+        align-content: center;
+
+        background: #b2b2ff;
+        height: 500px;
+      }
+
+      .item{
+        margin: auto;
+        background: blue;
+
+/*        width: 200px;*/
+        height: 100px;
+/*        height: 40px; */
+        text-align: center;
+      }
+      .item1{
+        flex: 2;
+      }
+      .item2{
+        flex: 3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item item1">bla</div>
+      <div class="item item2">bla</div>
+      <div class="item">bla</div>
+      <div class="item">bla</div>
+    </div>
+
+
+  </body>
+</html>

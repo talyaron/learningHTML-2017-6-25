@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+      div{
+        width: 200px;
+        height: 200px;
+      }
+      .colorful{
+        background:  linear-gradient(45deg,blue, green, yellow);
+
+      }
+      .simple{
+        position: fixed;
+        top:3px;
+        left:5px;
+        background: gray;
+        z-index: -50;
+
+        animation-name: move2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes move2 {
+        from {
+          transform: translate(0px, 0px);
+        }
+        to {
+          transform: translate(200px, 0px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+    <div class="colorful">Test</div>
+    <div class="simple">test</div>
+
+</html>
